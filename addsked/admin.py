@@ -1,0 +1,8 @@
+from django.contrib import admin
+from models import *
+
+# Register your models here.
+class UserSkedAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description', 'date_created', 'ratings', 'likes')
+
+admin.site.register(UserSked, UserSkedAdmin)
