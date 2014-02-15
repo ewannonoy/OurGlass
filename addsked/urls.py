@@ -4,7 +4,3 @@ urlpatterns = urls.patterns('addsked.views',
     urls.url(r'^create/$',create_sked, name='createsked'),       
     
 )
-
-
-
-

@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+    </head>
+    <body>	
+	        
+		            
+            {% for cell in get_all %}
+            <div>
+                <a href="{{ cell.get_absolute_url }}">Title: {{ cell.title }} </a>
+                </br>  
+                Description: {{ cell.description }}
+                </br>
+                Ratings: {{ cell.ratings }}
+                </br>
+                Views: {{ cell.likes }}
+                </br>
+                </br>
+                </br>
+            </div>                 
+            {% endfor %}                        
+                
+        
+        
+
+
+
+	</body>
+
+</html>
+
+
+

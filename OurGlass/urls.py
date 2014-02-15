@@ -10,5 +10,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('addsked.urls')),
+    url(r'^', include('searchevents.urls')),
 
 )

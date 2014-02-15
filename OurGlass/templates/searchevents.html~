@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>	
+	        
+		            
+            {% for cell in get_all %}
+            <div>
+                <a href="{% url 'opensked' %}">Title: {{ cell.title }} </a>
+                </br>  
+                Description: {{ cell.description }}
+                </br>
+                Ratings: {{ cell.ratings }}
+                </br>
+                Views: {{ cell.likes }}
+                </br>
+                </br>
+                </br>
+            </div>                 
+            {% endfor %}                        
+                
+	</body>
+</html>
+
+
+

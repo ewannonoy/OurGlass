@@ -2,14 +2,7 @@ from django import forms
 from django.forms import ModelForm
 from addsked.models import *
 class CreateSkedForm(forms.ModelForm):
-    name = forms.CharField(max_length=100)
     class Meta:
         model = UserSked
-        fields = '__all__'
-
-
-
-   
-
 
    

@@ -3,43 +3,20 @@
         <script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery.js"></script>  
     </head>
     <body>	
-        <form action="." method="GET">
-	        
-		    
-            
-            {% for cell in get_all %}
-                Author: {{ cell.author }}
-                </br> 
-                </br>
-                
-                <a href="{{ cell.get_absolute_url }}">Title: {{ cell.title }} </a>
-                </br>  
-                Description: {{ cell.description }}
-                </br>
-                Ratings: {{ cell.ratings }}
-                </br>
-                Views: {{ cell.likes }}
-                </br>
-                </br>
-                </br>
-                                
-            {% endfor %}                        
-            </br>    
-            <input type="submit" class="view_submit" value="View" name="viewBtn">
-            
-        </form>
-    
-        <form method="POST" id="form_id">
-            {% csrf_token %}
-            {{ form.as_p }}
-    
-            
-
-            <input type="button" value="Submit" class="submit" />
-        </form>
+    <form action="." enctype="multipart/form-data" method="POST">
+	    {% csrf_token %}    	    
         
-
-
+        Title: {{ create_form.title }}
+        <br>
+        Description: {{ create_form.description }}
+        <br>    
+        Date: {{ create_form.event_date }}
+        <br>    
+        Time: {{ create_form.event_time }}
+        <br>
+        Upload {{ create_form.photo }}
+        <input type="submit" value="Create" name="createBtn">
+    </form>
 
 	</body>
 
